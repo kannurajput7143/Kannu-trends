@@ -1,0 +1,36 @@
+index.html
+<!DOCTYPE html>
+<https://amzn.to/47DIE55>
+<head>
+  <title>Kannu Trends Store</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f5f5f5; }
+    h1 { color: #222; }
+    .product {
+      background: white; padding: 15px; margin: 10px auto;
+      width: 80%; border-radius: 10px; box-shadow: 0 0 5px gray;
+    }
+    a { text-decoration: none; color: white; background: #007bff; padding: 10px 20px; border-radius: 5px; }
+    a:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Kannu Trends 🛒</h1>
+  <p>Best Amazon products — buy directly below 👇</p>
+
+  <div class="product">
+    <h2>Product 1: Stylish Watch</h2>
+    <a href="Yahan-apna-affiliate-link-daal">Buy Now</a>
+  </div>
+
+  <div class="product">
+    <h2>Product 2: Headphones</h2>
+    <a href="Dusra-affiliate-link-yahan-daal">Buy Now</a>
+  </div>
+
+  <div class="product">
+    <h2>Product 3: beauty and skin care</h2>
+    <a href="Teesra-affiliate-link-yahan-daal">Buy Now</a>
+  </div>
+</body>
+</html>
