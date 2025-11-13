@@ -1,0 +1,23 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kannu Trends - Amazon Affiliate Store</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; padding: 50px; }
+    h1 { color: #222; }
+    a { display: block; margin: 10px 0; color: blue; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Kannu Trends 🌟</h1>
+  <p>Explore my Amazon affiliate picks below 👇</p>
+
+  <a href="https://amzn.to/47DIE55" target="_blank">🔥 Check out this product on Amazon</a>
+
+  <p>More products coming soon!</p>
+</body>
+</html> 
