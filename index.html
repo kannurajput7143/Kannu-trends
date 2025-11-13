@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kannu Trends - Amazon Store</title>
+  <title>Kannu Trends - Amazon Deals Store</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -11,47 +11,80 @@
       margin: 0;
       padding: 0;
       color: #333;
-      text-align: center;
     }
+
     header {
       background-color: #ff6f61;
       color: white;
-      padding: 15px;
+      text-align: center;
+      padding: 20px;
       font-size: 24px;
       font-weight: bold;
     }
-    .product {
+
+    .product-card {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin: 20px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 300px;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .product img {
+
+    .product-card img {
       width: 100%;
-      border-radius: 12px;
+      max-width: 200px;
+      border-radius: 10px;
     }
-    .product a {
-      display: inline-block;
-      background: #ff6f61;
+
+    .product-card h3 {
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: #ff6f61;
       color: white;
       padding: 10px 20px;
+      border: none;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
       margin-top: 10px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <header>Kannu Trends - Amazon Store 🛒</header>
 
-  <div class="product">
-    <img src="https://m.media-amazon.com/images/I/71X1a5z7C9L._SX679_.jpg" alt="Smart Watch">
+  <header>🛍 Kannu Trends - Amazon Deals Store</header>
+
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71fVoqRC0wL._SX679_.jpg" alt="Smart Watch">
     <h3>Smart Watch</h3>
-    <a href="https://amzn.to/47DIE55" target="_blank">Buy Now</a>
+    <a href="https://amzn.to/47DIE55" class="btn" target="_blank">Buy on Amazon</a>
   </div>
+
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OQL._SX679_.jpg" alt="Wireless Earbuds">
+    <h3>Wireless Earbuds</h3>
+    <a href="https://amzn.to/47DIE55" class="btn" target="_blank">Buy on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71yEX2t8R-L._SX679_.jpg" alt="Bluetooth Speaker">
+    <h3>Bluetooth Speaker</h3>
+    <a href="https://amzn.to/47DIE55" class="btn" target="_blank">Buy on Amazon</a>
+  </div>
+
+  <footer>© 2025 Kannu Trends | Amazon Affiliate Store</footer>
 
 </body>
 </html>
