@@ -1,288 +1,147 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kannu Trends (Rajput) — Store</title>
-  <style>
-    :root{
-      --accent:#d97706; /* warm amber */
-      --bg:#ffffff;
-      --muted:#6b7280;
-      --card:#f8fafc;
-      --radius:14px;
-      --maxw:1200px;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kannu Trends</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f3f3f3;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#fff 0%,#fbfbfd 100%);color:#0f172a}
-    .container{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ef4444);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(16,24,40,0.08)}
-    h1{margin:0;font-size:20px}
-    .sub{color:var(--muted);font-size:13px}
-    nav{display:flex;gap:8px;flex-wrap:wrap}
-    .nav-btn{background:#fff;border:1px solid #eef2ff;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
-    .hero-card{background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:16px;box-shadow:0 8px 28px rgba(2,6,23,0.06)}
-    .search{display:flex;gap:8px}
-    .search input{flex:1;padding:12px;border-radius:12px;border:1px solid #eee;font-size:14px}
-    .search button{padding:12px 14px;border-radius:12px;background:var(--accent);border:none;color:white;font-weight:700;cursor:pointer}/* categories */
-.category{margin-top:22px}
-.cat-header{display:flex;justify-content:space-between;align-items:center}
-.cat-header h2{margin:0;font-size:18px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
 
-/* product card */
-.card{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(15,23,42,0.03);display:flex;flex-direction:column;gap:10px}
-.img{width:100%;aspect-ratio:1/1;border-radius:10px;background:#e6eefc;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
-.title{font-size:14px;line-height:1.2;color:#071233;font-weight:700}
-.price{font-size:15px;color:var(--accent);font-weight:800}
-.meta{font-size:13px;color:var(--muted)}
-.actions{display:flex;gap:8px}
-.btn{flex:1;padding:10px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
-.buy{background:var(--accent);color:white}
-.view{background:white;border:1px solid #e6edf8}
+    /* Header */
+    .header {
+        background: #232f3e;
+        color: white;
+        padding: 15px 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
 
-footer{margin-top:28px;padding:18px;border-radius:12px;background:#fff;border:1px solid #f1f5f9;color:var(--muted);font-size:13px}
+    /* Banner */
+    .banner {
+        width: 100%;
+        height: 180px;
+        background: url('https://m.media-amazon.com/images/G/31/img24/Fashion/Gateway/Dec/PC-hero.jpg') center/cover;
+        border-radius: 0;
+    }
 
-@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr} }
-@media (max-width:640px){.grid{grid-template-columns:1fr}.logo{width:52px;height:52px}}
+    /* Section titles */
+    .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 15px 10px 5px;
+    }
 
-  </style>
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 10px;
+    }
+
+    /* Product Card */
+    .card {
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .buy-btn {
+        margin-top: 8px;
+        background: #ff9900;
+        padding: 8px;
+        border-radius: 6px;
+        display: block;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .contact-box {
+        background: white;
+        padding: 15px;
+        margin: 20px 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+</style>
+
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">KR</div>
-        <div>
-          <h1>Kannu Trends <span style="font-weight:600;color:var(--muted);font-size:13px">(Rajput)</span></h1>
-          <div class="sub">Curated products — best picks &amp; deals</div>
-        </div>
-      </div>
-      <nav>
-        <button class="nav-btn" onclick="scrollToCategory('Suits')">Suits</button>
-        <button class="nav-btn" onclick="scrollToCategory('Beauty')">Beauty</button>
-        <button class="nav-btn" onclick="scrollToCategory('Kids')">Kids Toys</button>
-        <button class="nav-btn" onclick="scrollToCategory('Pampers')">Pampers</button>
-        <button class="nav-btn" onclick="scrollToCategory('Mobile')">Mobile Accessories</button>
-      </nav>
-    </header><section class="hero">
-  <div class="hero-card">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <h2 style="margin:0 0 6px 0">Featured picks</h2>
-        <div class="sub">Handpicked &amp; organised group-wise for quick buying</div>
-      </div>
-      <div style="text-align:right;color:var(--muted);font-size:13px">Kannu Trends</div>
+
+<!-- Header -->
+<div class="header">Kannu Trends</div>
+
+<!-- Banner -->
+<div class="banner"></div>
+
+<!-- Suits Section -->
+<div class="section-title">Suits Collection</div>
+<div class="products">
+
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71YqTMIrF4L._AC_UL480_FMwebp_QL65_.jpg">
+        <a class="buy-btn" href="YOUR-LINK-1" target="_blank">Buy Now</a>
     </div>
 
-    <div style="margin-top:14px">
-      <div class="search">
-        <input id="q" placeholder="Search products, e.g. suits, toys..." />
-        <button onclick="filter()">Search</button>
-      </div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71fgL35tWUL._AC_UL480_FMwebp_QL65_.jpg">
+        <a class="buy-btn" href="YOUR-LINK-2" target="_blank">Buy Now</a>
     </div>
 
-    <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
-      <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid #eef2ff;font-weight:700">Free shipping</div>
-      <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid #eef2ff;font-weight:700">Top quality</div>
-      <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid #eef2ff;font-weight:700">Best price</div>
-    </div>
-  </div>
+</div>
 
-  <aside style="display:flex;flex-direction:column;gap:12px">
-    <div class="hero-card" style="padding:14px;text-align:center">
-      <div style="font-weight:800;font-size:15px">Special Offer</div>
-      <div class="sub" style="margin-top:6px">Seasonal picks — limited time</div>
-      <div style="margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg,#fff,#fffbf0);font-weight:800">Flat deals + coupons</div>
+<!-- Beauty Section -->
+<div class="section-title">Beauty Picks</div>
+<div class="products">
+
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61A-6LTjZDL._SL1500_.jpg">
+        <a class="buy-btn" href="YOUR-LINK-3" target="_blank">Buy Now</a>
     </div>
 
-    <div class="hero-card" style="padding:14px;text-align:center">
-      <div style="font-weight:800">Contact</div>
-      <div class="sub" style="margin-top:6px">WhatsApp: +91 00000 00000</div>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61nqXWiwxFL._SL1500_.jpg">
+        <a class="buy-btn" href="YOUR-LINK-4" target="_blank">Buy Now</a>
     </div>
-  </aside>
-</section>
 
-<!-- CATEGORIES -->
+</div>
 
-<section id="Suits" class="category">
-  <div class="cat-header"><h2>Suits</h2><div class="sub">Formal &amp; party suits — curated</div></div>
-  <div class="grid" id="suits-grid">
-    <!-- Suit items inserted here -->
-  </div>
-</section>
+<!-- Kids Toys -->
+<div class="section-title">Kids Toys</div>
+<div class="products">
 
-<section id="Beauty" class="category">
-  <div class="cat-header"><h2>Beauty</h2><div class="sub">Skincare &amp; Makeup picks</div></div>
-  <div class="grid" id="beauty-grid"></div>
-</section>
-
-<section id="Kids" class="category">
-  <div class="cat-header"><h2>Kids Toys</h2><div class="sub">Toys &amp; games for kids</div></div>
-  <div class="grid" id="kids-grid"></div>
-</section>
-
-<section id="Pampers" class="category">
-  <div class="cat-header"><h2>Pampers</h2><div class="sub">Baby care essentials</div></div>
-  <div class="grid" id="pampers-grid"></div>
-</section>
-
-<section id="Mobile" class="category">
-  <div class="cat-header"><h2>Mobile Accessories</h2><div class="sub">Chargers, cases, cables &amp; more</div></div>
-  <div class="grid" id="mobile-grid"></div>
-</section>
-
-<footer>
-  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-    <div>© <strong>Kannu Trends (Rajput)</strong> — Curated affiliate store</div>
-    <div class="sub">Designed for fast conversions • Replace placeholder images with product photos for best results</div>
-  </div>
-</footer>
-
-  </div>  <script>
-    // Product data (group-wise) — using links you provided. Replace image with actual product images when available.
-    const placeholder = (title)=>`https://via.placeholder.com/400?text=${encodeURIComponent(title)}`;
-
-    const data = {
-      Suits:[
-        {title:'Suit 1',link:'https://amzn.to/3WXGV4w'},
-        {title:'Suit 2',link:'https://amzn.to/4oMUqjK'},
-        {title:'Suit 3',link:'https://amzn.to/3JVzlEC'},
-        {title:'Suit 4',link:'https://amzn.to/3K05uLf'},
-        {title:'Suit 5',link:'https://amzn.to/48c7NEd'},
-        {title:'Suit 6',link:'https://amzn.to/4oPXETO'},
-        {title:'Suit 7',link:'https://amzn.to/4r3403k'},
-        {title:'Suit 8',link:'https://www.amazon.in/dp/B0DTK72577/ref=cm_sw_r_as_gl_apa_gl_i_7FG9ZANR2GS8HEMQAZF8?linkCode=ml1&tag=kannutrends-21&linkId=f522403b409f9afb5d33c1e0f800c699'},
-        {title:'Suit 9',link:'https://amzn.to/49QjxgU'}
-      ],
-      Beauty:[
-        {title:'Beauty 1',link:'https://amzn.to/486TEHo'},
-        {title:'Beauty 2',link:'https://www.amazon.in/dp/B0CTMP8FC3/ref=cm_sw_r_as_gl_apa_gl_i_MRHEJTDYD3J0EXTZPNWE?linkCode=ml1&tag=kannutrends-21&linkId=67b31276bb251483e75ae156e3ddd823'},
-        {title:'Beauty 3',link:'https://www.amazon.in/dp/B07Y3F85BV/ref=cm_sw_r_as_gl_apa_gl_i_65S98D0HV3F37WEN3XQJ?linkCode=ml1&tag=kannutrends-21&linkId=dd2eebcc85e69909106a3f3982e9b266'},
-        {title:'Beauty 4',link:'https://amzn.to/48lVBzR'},
-        {title:'Beauty 5',link:'https://www.amazon.in/dp/B07MH1KHJ2/ref=cm_sw_r_as_gl_apa_gl_i_dl_F93288A8B5F7MCSB64B7?linkCode=ml1&tag=kannutrends-21&linkId=672ef427211d8e91cdfe4ff274f7880c'},
-        {title:'Beauty 6',link:'https://amzn.to/4qVzacZ'},
-        {title:'Beauty 7',link:'https://www.amazon.in/dp/B0CRS3H4BT/ref=cm_sw_r_as_gl_apa_gl_i_F6SZF3BMB2HRWPT6TJ92?linkCode=ml1&tag=kannutrends-21&linkId=b52cc9f11c809ee6578d4e36e33a35b8'},
-        {title:'Beauty 8',link:'https://amzn.to/4oEmAgH'},
-        {title:'Beauty 9',link:'https://amzn.to/4r6Rpwk'},
-        {title:'Beauty 10',link:'https://amzn.to/4nW7l1q'},
-        {title:'Beauty 11',link:'https://www.amazon.in/dp/B0CTX3T31R/ref=cm_sw_r_as_gl_apa_gl_i_V1HFY6157ACTW4PJYBBX?linkCode=ml1&tag=kannutrends-21&linkId=6703fafeed465baeddf3c31a8df623bc'},
-        {title:'Beauty 12',link:'https://www.amazon.in/dp/B0B4NNBMMV/ref=cm_sw_r_as_gl_apa_gl_i_XPMAPWT975XJ6JSFX85H?linkCode=ml1&tag=kannutrends-21&linkId=7b3bd8fa32d308fb2282aa3b6358f071'},
-        {title:'Beauty 13',link:'https://www.amazon.in/dp/B0D4YQ2NB8/ref=cm_sw_r_as_gl_apa_gl_i_SGZCJQHWM4ZWJRJ91QNT?linkCode=ml1&tag=kannutrends-21&linkId=6b9c60999d40b8376d96168ef73d3849'},
-        {title:'Beauty 14',link:'https://www.amazon.in/dp/B00V4L6JC2/ref=cm_sw_r_as_gl_apa_gl_i_AJNMY6TWBVP6MV6GFCF5?linkCode=ml1&tag=kannutrends-21&linkId=51b3aba91e4d544be5e9dc2f75b16895'}
-      ],
-      Kids:[
-        {title:'Toy 1',link:'https://www.amazon.in/dp/B0BMLQ1RHP/ref=cm_sw_r_as_gl_apa_gl_i_dl_838DDQYYREHX6E4CBWQR?linkCode=ml1&tag=kannutrends-21&linkId=af2792c9bc6e94d945ffd4fab7d026c0'},
-        {title:'Toy 2',link:'https://amzn.to/49hpeUU'},
-        {title:'Toy 3',link:'https://www.amazon.in/dp/B0CZF1WWNF/ref=cm_sw_r_as_gl_apa_gl_i_dl_J8C8S3EN3CATT2TC30FM?linkCode=ml1&tag=kannutrends-21&linkId=25abe19cc0d2a104edc2a3f0da1114bf'},
-        {title:'Toy 4',link:'https://amzn.to/3Xshx78'}
-      ],
-      Pampers:[
-        {title:'Pampers 1',link:'https://amzn.to/4o1hjPp'},
-        {title:'Pampers 2',link:'https://amzn.to/4paHqnR'},
-        {title:'Pampers 3',link:'https://amzn.to/4pcg3cT'},
-        {title:'Pampers 4',link:'https://amzn.to/3JMWyZF'}
-      ],
-      Mobile:[
-        {title:'Mobile 1',link:'https://amzn.to/43rOcgI'},
-        {title:'Mobile 2',link:'https://www.amazon.in/dp/B0D67345VK/ref=cm_sw_r_as_gl_apa_gl_i_dl_VZZ8FBNCC8GBJP8CSKHJ?linkCode=ml1&tag=kannutrends-21&linkId=609c23385f699780ca2520763c7762f4'},
-        {title:'Mobile 3',link:'https://www.amazon.in/dp/B0F48DQ4N9/ref=cm_sw_r_as_gl_apa_gl_i_XTB2BRD7YF8TXYMF5VJR?linkCode=ml1&tag=kannutrends-21&linkId=099fc8704e14b3159ca0928ea5c8494b'},
-        {title:'Mobile 4',link:'https://www.amazon.in/dp/B0851WWXJC/ref=cm_sw_r_as_gl_apa_gl_i_5WX2D0D8RW0M4DR8T52G?linkCode=ml1&tag=kannutrends-21&linkId=f08336211deb80f17028d8a9e0f87a03'},
-        {title:'Mobile 5',link:'https://www.amazon.in/dp/B08TV2P1N8/ref=cm_sw_r_as_gl_apa_gl_i_4AREMV25309PP7DCPQ2D?linkCode=ml1&tag=kannutrends-21&linkId=z'},
-        {title:'Mobile 6',link:'https://www.amazon.in/dp/B0BQN3NW8C/ref=cm_sw_r_as_gl_apa_gl_i_NX8RZ45MVX08WT4G7VN1?linkCode=ml1&tag=kannutrends-21&linkId=db536cb08e41e191e0639b79a26719be'},
-        {title:'Mobile 7',link:'https://www.amazon.in/dp/B0DMDKTQCN/ref=cm_sw_r_as_gl_apa_gl_i_dl_PHGWR1S206HAQJTMDZVW?linkCode=ml1&tag=kannutrends-21&linkId=f0a4c5a9327e4ce5a7d7d048fd049710'},
-        {title:'Mobile 8',link:'https://amzn.to/4oGR3L1'},
-        {title:'Mobile 9',link:'https://amzn.to/47J3LmI'},
-        {title:'Mobile 10',link:'https://amzn.to/3LGFMfl'},
-        {title:'Mobile 11',link:'https://www.amazon.in/dp/B0FTR5NGHJ/ref=cm_sw_r_as_gl_apa_gl_i_dl_REYTDRSNYJV5PK6VFRHW?linkCode=ml1&tag=kannutrends-21&linkId=47d0dbac950f781e28c0ea16fc2dea88'},
-        {title:'Mobile 12',link:'https://www.amazon.in/dp/B0FLXPFTM7/ref=cm_sw_r_as_gl_apa_gl_i_dl_PSK4XQAXG34DM2495ZJY?linkCode=ml1&tag=kannutrends-21&linkId=63473075d70729dc0aa274b96bc78036'},
-        {title:'Mobile 13',link:'https://www.amazon.in/dp/B0DWSQQB5S/ref=cm_sw_r_as_gl_apa_gl_i_R23GHB5K927RJEMNTF14?linkCode=ml1&tag=kannutrends-21&linkId=cb80fa480dbcaa708f0299b6cec60a44'},
-        {title:'Mobile 14',link:'https://www.amazon.in/dp/B0FKGQKYCY/ref=cm_sw_r_as_gl_apa_gl_i_F1Y217PK6F3SDH8E57A8?linkCode=ml1&tag=kannutrends-21&linkId=44231984d75d67ba0179bf8da6800461'}
-      ]
-    }
-
-    function makeCard(item){<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kannu Trends</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="header">
-    <div class="logo">Kannu <span>Trends</span></div>
-    <nav class="nav">
-      <button class="nav-btn">Suits</button>
-      <button class="nav-btn">Beauty</button>
-      <button class="nav-btn">Kids Toys</button>
-      <button class="nav-btn">Pampers</button>
-      <button class="nav-btn">Mobile Accessories</button>
-    </nav>
-  </header>  <section class="featured">
-    <h2>Featured picks</h2>
-    <p>Handpicked & organised group-wise for quick buying</p>
-    <div class="search-box">
-      <input type="text" placeholder="Suits" />
-      <button class="search-btn">Search</button>
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71CZbAHT7WL._SL1500_.jpg">
+        <a class="buy-btn" href="YOUR-LINK-5" target="_blank">Buy Now</a>
     </div>
-    <div class="tags">
-      <span>Free shipping</span>
-      <span>Top quality</span>
-      <span>Best price</span>
+
+    <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71mFeoJEBwL._SL1500_.jpg">
+        <a class="buy-btn" href="YOUR-LINK-6" target="_blank">Buy Now</a>
     </div>
-  </section>  <section class="offer">
-    <h3>Special Offer</h3>
-    <p>Seasonal picks — limited time</p>
-    <div class="offer-box">Flat deals + coupons</div>
-  </section>  <section class="contact">
-    <h3>Contact</h3>
-    <p>WhatsApp: +91 9622352456</p>
-  </section>  <section class="products" id="products">
-    <h2>Suits</h2>
-    <div class="product-grid" id="productGrid"></div>
-  </section>  <script src="products.js"></script></body>
-</html>
-      return `
-      <div class="card">
-        <a class="img" href="${item.link}" target="_blank" rel="noopener noreferrer"><img style="width:100%;height:100%;object-fit:cover;border-radius:8px" src="https://picsum.photos/300?random=1" alt="${item.title}" /></a>
-        <div class="title">${item.title}</div>
-        <div class="meta">Best seller • Trusted</div>
-        <div class="price">₹ —</div>
-        <div class="actions">
-          <a class="btn view" href="${item.link}" target="_blank" rel="noopener noreferrer">View on Amazon</a>
-          <a class="btn buy" href="${item.link}" target="_blank" rel="noopener noreferrer">Buy Now</a>
-        </div>
-      </div>`;
-    }
 
-    function render(){
-      document.getElementById('suits-grid').innerHTML = data.Suits.map(makeCard).join('');
-      document.getElementById('beauty-grid').innerHTML = data.Beauty.map(makeCard).join('');
-      document.getElementById('kids-grid').innerHTML = data.Kids.map(makeCard).join('');
-      document.getElementById('pampers-grid').innerHTML = data.Pampers.map(makeCard).join('');
-      document.getElementById('mobile-grid').innerHTML = data.Mobile.map(makeCard).join('');
-    }
+</div>
 
-    function scrollToCategory(id){
-      document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
-    }
+<!-- Contact -->
+<div class="contact-box">
+    📞 WhatsApp: <b>9622352456</b><br>
+    For deals, discounts & product help
+</div>
 
-    function filter(){
-      const q = document.getElementById('q').value.trim().toLowerCase();
-      if(!q){ render(); return; }
-      const all = ['Suits','Beauty','Kids','Pampers','Mobile'].reduce((acc,k)=>acc.concat(data[k]),[]);
-      const found = all.filter(i=>i.title.toLowerCase().includes(q) || i.link.toLowerCase().includes(q));
-      // show found in suits-grid for simplicity
-      document.getElementById('suits-grid').innerHTML = found.length?found.map(makeCard).join(''):'<div style="grid-column:1/-1;padding:18px;background:#fff;border-radius:10px">No results</div>';
-      ['beauty-grid','kids-grid','pampers-grid','mobile-grid'].forEach(id=>document.getElementById(id).innerHTML='');
-    }
-
-    // initial render
-    render();
-  </script></body>
+</body>
 </html>
