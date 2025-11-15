@@ -206,7 +206,47 @@ footer{margin-top:28px;padding:18px;border-radius:12px;background:#fff;border:1p
       ]
     }
 
-    function makeCard(item){
+    function makeCard(item){<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kannu Trends</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Kannu <span>Trends</span></div>
+    <nav class="nav">
+      <button class="nav-btn">Suits</button>
+      <button class="nav-btn">Beauty</button>
+      <button class="nav-btn">Kids Toys</button>
+      <button class="nav-btn">Pampers</button>
+      <button class="nav-btn">Mobile Accessories</button>
+    </nav>
+  </header>  <section class="featured">
+    <h2>Featured picks</h2>
+    <p>Handpicked & organised group-wise for quick buying</p>
+    <div class="search-box">
+      <input type="text" placeholder="Suits" />
+      <button class="search-btn">Search</button>
+    </div>
+    <div class="tags">
+      <span>Free shipping</span>
+      <span>Top quality</span>
+      <span>Best price</span>
+    </div>
+  </section>  <section class="offer">
+    <h3>Special Offer</h3>
+    <p>Seasonal picks — limited time</p>
+    <div class="offer-box">Flat deals + coupons</div>
+  </section>  <section class="contact">
+    <h3>Contact</h3>
+    <p>WhatsApp: +91 00000 00000</p>
+  </section>  <section class="products" id="products">
+    <h2>Suits</h2>
+    <div class="product-grid" id="productGrid"></div>
+  </section>  <script src="products.js"></script></body>
+</html>
       return `
       <div class="card">
         <a class="img" href="${item.link}" target="_blank" rel="noopener noreferrer"><img style="width:100%;height:100%;object-fit:cover;border-radius:8px" src="https://picsum.photos/300?random=1" alt="${item.title}" /></a>
