@@ -3,154 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kannu Trends</title>
+<title>Kannu Trends Store</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f3f3f3;
-    }
-    .header {
-        background: #232f3e;
-        color: white;
-        padding: 15px 20px;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .banner {
-        width: 100%;
-        height: 180px;
-        background: url('https://m.media-amazon.com/images/G/31/img24/Fashion/Gateway/Dec/PC-hero.jpg') center/cover;
-    }
-    .section-title {
-        font-size: 22px;
-        font-weight: bold;
-        padding: 15px 10px 5px;
-    }
-    .products {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        padding: 10px;
-    }
-    .card {
-        background: white;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-    .buy-btn {
-        margin-top: 8px;
-        background: #ff9900;
-        padding: 8px;
-        border-radius: 6px;
-        display: block;
-        color: black;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .contact-box {
-        background: white;
-        padding: 15px;
-        margin: 20px 10px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 18px;
-    }
+    body { margin:0; font-family:Arial; background:#f3f3f3; }
+    header { background:#232f3e; color:white; padding:15px; font-size:22px; font-weight:bold; }
+    h2 { margin:15px; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; padding:10px; }
+    .card { background:white; padding:10px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15); text-align:center; }
+    .card img { width:100%; height:170px; object-fit:contain; background:white; border-radius:8px; }
+    .btn { display:block; margin-top:8px; background:#ff9900; padding:10px; border-radius:6px; color:black; font-weight:bold; text-decoration:none; }
+    footer { margin:25px 10px; padding:15px; background:white; text-align:center; border-radius:10px; font-size:18px; }
 </style>
-
 </head>
+
 <body>
 
-<div class="header">Kannu Trends</div>
-<div class="banner"></div>
+<header>Kannu Trends</header>
 
-<!-- Suits Collection -->
-<div class="section-title">Suits Collection</div>
-<div class="products">
+<!-- Container -->
+<div id="main"></div>
 
-    <!-- Product 1 -->
-    <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71YqTMIrF4L._AC_UL480_FMwebp_QL65_.jpg">
-        <a class="buy-btn" 
-           href="https://www.amazon.in/dp/B0DYDPKLVC/ref=cm_sw_r_as_gl_apa_gl_i_dl_8DHGZAMF1VRT05S1EFG6?linkCode=ml1&tag=kannutrends-21&linkId=ac05bd6055fd7e7cd0a9c4baeb0c1dca" 
-           target="_blank">
-           Buy Now
-        </a>
-    </div>
+<footer>
+📞 WhatsApp: <b>9622352456</b> <br>
+Best Deals • Support • Fast Help
+</footer>
 
-    <!-- Product 2 -->
-    <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71fgL35tWUL._AC_UL480_FMwebp_QL65_.jpg">
-        <a class="buy-btn" 
-           href="https://www.amazon.in/dp/B0DYC12PX3?tag=kannutrends-21" 
-           target="_blank">
-           Buy Now
-        </a>
-    </div>
+<script>
 
-</div>
+// ----------------------------
+// PRODUCT CATEGORIES
+// ----------------------------
 
-<!-- Beauty Picks -->
-<div class="section-title">Beauty Picks</div>
-<div class="products">
+// SUITS
+const suits = [
+ "https://amzn.to/3WXGV4w",
+ "https://amzn.to/4oMUqjK",
+ "https://amzn.to/3JVzlEC",
+ "https://amzn.to/3K05uLf",
+ "https://amzn.to/48c7NEd",
+ "https://amzn.to/4oPXETO",
+ "https://amzn.to/4r3403k",
+ "https://www.amazon.in/dp/B0DTK72577",
+ "https://amzn.to/49QjxgU"
+];
 
-    <div class="card">
-        <img src="https://m.media-amazon.com/images/I/61A-6LTjZDL._SL1500_.jpg">
-        <a class="buy-btn" 
-           href="https://www.amazon.in/dp/B0CQYY5KJL?tag=kannutrends-21" 
-           target="_blank">
-           Buy Now
-        </a>
-    </div>
+// BEAUTY
+const beauty = [
+ "https://amzn.to/486TEHo",
+ "https://www.amazon.in/dp/B0CTMP8FC3",
+ "https://www.amazon.in/dp/B07Y3F85BV",
+ "https://amzn.to/48lVBzR",
+ "https://www.amazon.in/dp/B07MH1KHJ2",
+ "https://amzn.to/4qVzacZ",
+ "https://www.amazon.in/dp/B0CRS3H4BT",
+ "https://amzn.to/4oEmAgH",
+ "https://amzn.to/4r6Rpwk",
+ "https://amzn.to/4nW7l1q",
+ "https://www.amazon.in/dp/B0CTX3T31R",
+ "https://www.amazon.in/dp/B0B4NNBMMV",
+ "https://www.amazon.in/dp/B0D4YQ2NB8",
+ "https://www.amazon.in/dp/B00V4L6JC2"
+];
 
-    <div class="card">
-        <img src="https://m.media-amazon.com/images/I/61nqXWiwxFL._SL1500_.jpg">
-        <a class="buy-btn" 
-           href="https://www.amazon.in/dp/B0D2LQJ6NB?tag=kannutrends-21" 
-           target="_blank">
-           Buy Now
-        </a>
-    </div>
+// KIDS TOYS
+const toys = [
+ "https://www.amazon.in/dp/B0BMLQ1RHP",
+ "https://amzn.to/49hpeUU",
+ "https://www.amazon.in/dp/B0CZF1WWNF",
+ "https://amzn.to/3Xshx78"
+];
 
-</div>
+// PAMPERS
+const pampers = [
+ "https://amzn.to/4o1hjPp",
+ "https://amzn.to/4paHqnR",
+ "https://amzn.to/4pcg3cT",
+ "https://amzn.to/3JMWyZF"
+];
 
-<!-- Kids Toys -->
-<div class="section-title">Kids Toys</div>
-<div class="products">
+// MOBILE ACCESSORIES
+const mobile = [
+ "https://amzn.to/43rOcgI",
+ "https://www.amazon.in/dp/B0D67345VK",
+ "https://www.amazon.in/dp/B0F48DQ4N9",
+ "https://www.amazon.in/dp/B0851WWXJC",
+ "https://www.amazon.in/dp/B08TV2P1N8",
+ "https://www.amazon.in/dp/B0BQN3NW8C",
+ "https://www.amazon.in/dp/B0DMDKTQCN",
+ "https://amzn.to/4oGR3L1",
+ "https://amzn.to/47J3LmI",
+ "https://amzn.to/3LGFMfl",
+ "https://www.amazon.in/dp/B0FTR5NGHJ",
+ "https://www.amazon.in/dp/B0FLXPFTM7",
+ "https://www.amazon.in/dp/B0DWSQQB5S",
+ "https://www.amazon.in/dp/B0FKGQKYCY"
+];
 
-    <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71CZbAHT7WL._SL1500_.jpg">
-        <a class="buy-btn" 
-           href="https://www.amazon.in/dp/B0CGL4X6S4?tag=kannutrends-21" 
-           target="_blank">
-           Buy Now
-        </a>
-    </div>
+// ----------------------------
+// ADD AFFILIATE TAG
+// ----------------------------
+function addTag(url){
+    if(url.includes("tag=")) return url;
+    return url.includes("?") ? url+"&tag=kannutrends-21" : url+"?tag=kannutrends-21";
+}
 
-    <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71mFeoJEBwL._SL1500_.jpg">
-        <a class="buy-btn" 
-           href="https://www.amazon.in/dp/B09ZY5CJMG?tag=kannutrends-21" 
-           target="_blank">
-           Buy Now
-        </a>
-    </div>
+// ----------------------------
+// EXTRACT ASIN & MAKE IMAGE URL
+// ----------------------------
+function getASIN(url){
+    const m = url.match(/\/dp\/([A-Z0-9]{10})/i);
+    return m ? m[1] : null;
+}
 
-</div>
+function imgURL(asin){
+    return `https://m.media-amazon.com/images/I/${asin}.jpg`;
+}
 
-<div class="contact-box">
-    📞 WhatsApp: <b>9622352456</b><br>
-    Deals, discounts & product help
-</div>
+// ----------------------------
+// RENDER CATEGORY
+// ----------------------------
+function renderCategory(title, list){
+    let html = `<h2>${title}</h2><div class="grid">`;
+
+    list.forEach(link => {
+        const asin = getASIN(link);
+        if(!asin) return;
+
+        html += `
+        <div class="card">
+            <img src="${imgURL(asin)}"
+            onerror="this.src='https://via.placeholder.com/200?text=Image+Not+Found'">
+            <a class="btn" href="${addTag(link)}" target="_blank">Buy Now</a>
+        </div>`;
+    });
+
+    html += `</div>`;
+    document.getElementById("main").innerHTML += html;
+}
+
+// ----------------------------
+// BUILD FULL STORE
+// ----------------------------
+renderCategory("Suits Collection", suits);
+renderCategory("Beauty Picks", beauty);
+renderCategory("Kids Toys", toys);
+renderCategory("Pampers Collection", pampers);
+renderCategory("Mobile Accessories", mobile);
+
+</script>
 
 </body>
 </html>
